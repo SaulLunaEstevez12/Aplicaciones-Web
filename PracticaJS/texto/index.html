@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Concatenación de Cadenas de Texto</title>
+  <script src="script.js"></script>
+</head>
+<body>
+  <h1>Concatenación de Cadenas de Texto</h1>
+  <input type="text" id="cadenaInput">
+  <button onclick="agregarCadena()">Agregar Cadena</button>
+  <button onclick="obtenerCadenas()">Cancelar</button>
+  <p id="resultado"></p>
+
+  <script>
+    var cadenas = [];
+
+    function agregarCadena() {
+      var cadenaInput = document.getElementById("cadenaInput");
+      var cadena = cadenaInput.value;
+      cadenas.push(cadena);
+      cadenaInput.value = "";
+    }
+
+    function obtenerCadenas() {
+      var resultado = document.getElementById("resultado");
+      resultado.textContent = cadenas.join("-");
+    }
+  </script>
+</body>
+</html>
+
+

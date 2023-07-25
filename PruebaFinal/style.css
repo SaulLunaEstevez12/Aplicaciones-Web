@@ -1,0 +1,213 @@
+/* Fondo verde claro */
+body {
+    background: rgba(182, 167, 117, 0.623);
+  }
+  
+/* Estilos para el header */
+header {
+    position: relative;
+    height: 40vh;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Evita que las imágenes salgan del contenedor en caso de expansión */
+  }
+  
+  /* Estilos para las imágenes del header */
+  .header-images {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.3s ease; /* Transición suave para el efecto de expansión */
+  }
+  
+  .header-images img {
+    width: 30%; /* Tamaño inicial de cada imagen */
+    border-radius: 10px; /* Redondear ligeramente las imágenes */
+    transition: all 0.3s ease; /* Transición suave para el efecto de expansión */
+  }
+  
+  /* Estilos para la expansión de imágenes al pasar el cursor */
+  .header-images img:hover {
+    width: 40%; /* Tamaño expandido de la imagen */
+  }
+   
+  
+  /* Iconos en fila horizontal centrados */
+  #nav-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  
+  #nav-icons a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    margin: 0 3rem;
+  }
+  
+  /* Cuadro verde oscuro para el botón de agregar usuario */
+  #addNew {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3a2b0f60;
+    color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: Italianno;
+  }
+  
+
+/* Cuadro con imagen */
+.container {
+    background-color: #5c441798;
+    color: rgb(0, 0, 0);
+    padding: 2rem;
+    margin: 2rem auto;
+    width: 100%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    background-image: url("barberpole.gif");
+    background-size: 95% 95%; /* Ajusta el tamaño del fondo al 90% del ancho y alto del contenedor */
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  
+  
+  .image-box {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .inner-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-top: 1rem; /* Añadimos un espacio para que el contenido no quede pegado a la imagen */
+  }
+  
+  
+  .content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  /* Rectángulo verde claro para el botón de agregar usuario dentro del cuadro */
+  #add {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #c2f0c2;
+    color: #006400;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Cajas con registros guardados */
+  #tasks {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+  
+  #tasks div {
+    border: 3px solid #a77a2898;
+    background-color: #c9994070;
+    border-radius: 6px;
+    padding: 5px;
+    display: grid;
+    gap: 4px;
+  }
+  
+  #tasks div .options {
+    justify-self: center;
+    display: flex;
+    gap: 20px;
+  }
+  
+  #tasks div .options i {
+    cursor: pointer;
+  }
+  
+  /* Botón de borrar todos los registros */
+  button.btn-danger {
+    background-color: #7412127a;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 2rem;
+  }
+  
+  #home img,
+  #cortes img,
+  #estilistas img,
+  #citas img {
+    width: 80px; /* Ajusta el tamaño deseado para las imágenes */
+    height: 80px; /* Ajusta el tamaño deseado para las imágenes */
+  }
+  
+  
+  
+  
+  
+  /*Efecto fade-in*/
+  header,
+#nav-icons a {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/*Efecto hover*/
+#addNew:hover,
+#add:hover {
+  background-color: #271d0a98;
+  color: #fff;
+  transform: scale(1.02); /* Aumenta el tamaño del botón en un 2% */
+    transition: transform 0.3s ease; /* Hace la transición suave durante 0.3 segundos */
+}
+
+#nav-icons a:hover {
+    background-color: rgb(202, 175, 123);
+    color: #fff;
+    transform: scale(1.2); /* Aumenta el tamaño de la imagen en un 20% */
+    transition: transform 0.3s ease; /* Hace la transición suave durante 0.3 segundos */
+ 
+  }
+
+  button.btn-danger:hover {
+    transform: scale(1.02); /* Aumenta el tamaño del botón en un 2% */
+    transition: transform 0.3s ease; /* Hace la transición suave durante 0.3 segundos */
+  }
